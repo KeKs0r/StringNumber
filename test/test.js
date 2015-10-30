@@ -13,6 +13,28 @@ var StringNumber = require('../index');
 
 describe("StringNumber", function () {
 
+
+    describe('Stringnumber class', function(){
+      it('can be cast to string', function(done){
+          var number = new StringNumber("4056437197321369473829423451234");
+          var longString = 'my '+ number;
+          expect(longString).string().equal('my 4056437197321369473829423451234');
+          done();
+      });
+    })
+
+    describe('StringNumber.stringify', function(){
+      it('can stringify a StringNumber', function(done){
+          var ownJSON = {
+              id: new StringNumber("4056437197321369473829423451234"),
+              nickname: ">>>Weird Characters<<<"
+          };
+          var output = StringNumber.stringify(ownJSON);
+          expect(output).string().contains('"id":4056437197321369473829423451234,');
+          done();
+      });
+    })
+
     describe('StringNumber.parse', function(){
 
         it('Can parse long integer from JSON into String', function(done){
@@ -23,16 +45,6 @@ describe("StringNumber", function () {
             done();
         });
 
-        it('can stringify a StringNumber', function(done){
-            var ownJSON = {
-                id: new StringNumber("4056437197321369473829423451234"),
-                nickname: ">>>Weird Characters<<<"
-            };
-            var output = StringNumber.stringify(ownJSON);
-            expect(output).string().contains('"id":4056437197321369473829423451234,');
-            done();
-        });
-
         it('is reversable', function(done){
             var input = '{"id":4056437197321369473829423451234,"custom_id":"2"}';
             var parsed = StringNumber.parse(input);
@@ -40,6 +52,5 @@ describe("StringNumber", function () {
             expect(input).equal(stringified);
             done();
         });
-
     });
 });
