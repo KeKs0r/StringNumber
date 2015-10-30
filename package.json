@@ -1,0 +1,29 @@
+{
+  "name": "StringNumber",
+  "version": "0.0.1",
+  "description": "JSON.parse and JSON.stringify with a conversion of big numbers into strings",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KeKs0r/StringNumber.git"
+  },
+  "keywords": [
+    "JSON",
+    "bigint",
+    "bignumber",
+    "parse",
+    "json"
+  ],
+  "author": {
+    "name": "Marc Höffl",
+    "email": "marc.hoeffl@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "lab": "~5.1.1",
+    "code": "~1.2.1"
+  },
+}
