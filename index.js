@@ -361,11 +361,7 @@ var json_parse = (function () {
     };
 }());
 
-json_stringify = require('./stringify.js').stringify;
-
 var result = StringNumber;
 result.parse = json_parse;
-result.stringify = json_stringify;
+result.stringify = require('./stringify.js').stringify;;
 module.exports = result;
-
-

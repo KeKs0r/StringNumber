@@ -4,7 +4,7 @@
   "description": "JSON.parse and JSON.stringify with a conversion of big numbers into strings",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "node node_modules/lab/bin/lab"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,5 @@
   "devDependencies": {
     "lab": "~5.1.1",
     "code": "~1.2.1"
-  },
+  }
 }

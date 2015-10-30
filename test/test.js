@@ -9,7 +9,7 @@ var after = lab.after;
 var describe = lab.experiment;
 var it = lab.test;
 
-var StringNumber = require('./index');
+var StringNumber = require('../index');
 
 describe("StringNumber", function () {
 
