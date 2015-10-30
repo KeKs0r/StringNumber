@@ -1,6 +1,6 @@
 {
   "name": "stringnumber",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JSON.parse and JSON.stringify with a conversion of big numbers into strings",
   "main": "index.js",
   "scripts": {
