@@ -21,6 +21,12 @@ describe("StringNumber", function () {
           expect(longString).string().equal('my 4056437197321369473829423451234');
           done();
       });
+
+      it('can check instance', function(done){
+        var myNumber = new StringNumber("9827349865348972654874");
+        expect(myNumber instanceof StringNumber).true();
+        done();
+      })
     })
 
     describe('StringNumber.stringify', function(){
